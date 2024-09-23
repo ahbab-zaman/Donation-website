@@ -20,6 +20,16 @@ donateButton1.addEventListener('click', function(){
     const remainingBalance = mainBalance - inputValue1;
     document.getElementById('main-balance').innerText = remainingBalance;
     document.getElementById('donate-input1').value = "";
+    my_modal_5.showModal();
+
+    const historyItems = document.createElement('div');
+    historyItems.className = "border-2 p-8 rounded-xl"
+    historyItems.innerHTML = `
+        <h2 class = "text-xl font-bold">${inputValue1} taka is donated for flood at Noakhali, Bangladesh</h2>
+        <p class = "text-sm text-gray-500">${new Date()}}</p>
+    `
+    const historyContainer = getAllElementsId('history-list');
+    historyContainer.insertBefore(historyItems, historyContainer.firstChild);
 })
 
 // Card-2 functions
@@ -36,6 +46,16 @@ const donateButton2 = getAllElementsId('donate-btn2');donateButton2.addEventList
     const remainingBalance = mainBalance - inputValue2;
     document.getElementById('main-balance').innerText = remainingBalance;
     document.getElementById('input-amount2').value = "";
+    my_modal_5.showModal();
+
+    const historyItems = document.createElement('div');
+    historyItems.className = "border-2 p-8 rounded-xl"
+    historyItems.innerHTML = `
+        <h2 class = "text-xl font-bold">${inputValue2} taka is donated for flood at Feni, Bangladesh</h2>
+        <p class = "text-sm text-gray-500">${new Date()}}</p>
+    `
+    const historyContainer = getAllElementsId('history-list');
+    historyContainer.insertBefore(historyItems, historyContainer.firstChild);
 })
 
 // Card-3 functions
@@ -54,5 +74,38 @@ donateButton3.addEventListener('click', function(){
     document.getElementById('donate-input3').value = "";
     const remainingBalance = mainBalance - inputValue3;
     document.getElementById('main-balance').innerText = remainingBalance;
+    my_modal_5.showModal();
+
+    const historyItems = document.createElement('div');
+    historyItems.className = "border-2 p-8 rounded-xl"
+    historyItems.innerHTML = `
+        <h2 class = "text-xl font-bold">${inputValue3} taka is donated for Quota Protest, Bangladesh</h2>
+        <p class = "text-sm text-gray-500">${new Date()}}</p>
+    `
+    const historyContainer = getAllElementsId('history-list');
+    historyContainer.insertBefore(historyItems, historyContainer.firstChild);
+})
+
+// history tab functions
+
+const historyTab = getAllElementsId('history-tab');
+const donationTab = getAllElementsId('donation-tab');
+const donationCards = getAllElementsId('donation-cards');
+historyTab.addEventListener('click', function(){
+    historyTab.classList.add("bg-[#B4F461]");
+    historyTab.classList.remove("bg-transparent");
+    donationTab.classList.remove("bg-[#B4F461]")
+    donationCards.classList.add("hidden");
+    document.getElementById('history-list').classList.remove('hidden')
+})
+
+// donation tab functions
+donationTab.addEventListener('click', function(){
+    donationTab.classList.add("bg-[#B4F461]");
+    historyTab.classList.remove("bg-[#B4F461]");
+    donationCards.classList.remove("hidden");
+    document.getElementById('history-list').classList.add('hidden')
+ 
+   
 })
 
