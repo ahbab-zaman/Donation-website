@@ -59,7 +59,6 @@ const donateButton2 = getAllElementsId('donate-btn2');donateButton2.addEventList
 })
 
 // Card-3 functions
-
 const donateButton3 = getAllElementsId('donate-btn3');
 donateButton3.addEventListener('click', function(){
     const inputValue3 = getInputValue('donate-input3');
@@ -87,7 +86,6 @@ donateButton3.addEventListener('click', function(){
 })
 
 // history tab functions
-
 const historyTab = getAllElementsId('history-tab');
 const donationTab = getAllElementsId('donation-tab');
 const donationCards = getAllElementsId('donation-cards');
