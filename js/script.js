@@ -12,7 +12,7 @@ donateButton1.addEventListener('click', function(){
     const donationBalance1 = getInnerText('donate-amount1');
     const mainBalance = parseFloat(getInnerText('main-balance'));
     if(inputValue1 <= 0  || isNaN(inputValue1) || inputValue1 > mainBalance){
-        alert('Invalid input');
+        alert('Invalid Donation Amount');
         return donationBalance1.innerText;     
    }
     const currBalance1 = inputValue1 + donationBalance1;
@@ -26,7 +26,7 @@ donateButton1.addEventListener('click', function(){
     historyItems.className = "border-2 p-8 rounded-xl"
     historyItems.innerHTML = `
         <h2 class = "text-xl font-bold">${inputValue1} taka is donated for flood at Noakhali, Bangladesh</h2>
-        <p class = "text-sm text-gray-500">${new Date()}}</p>
+        <p class = "text-sm text-gray-500">${new Date()}</p>
     `
     const historyContainer = getAllElementsId('history-list');
     historyContainer.insertBefore(historyItems, historyContainer.firstChild);
@@ -38,7 +38,7 @@ const donateButton2 = getAllElementsId('donate-btn2');donateButton2.addEventList
     const donationBalance2 = getInnerText('donate-amount2');
     const mainBalance = parseFloat(getInnerText('main-balance'));
     if(inputValue2 <= 0  || isNaN(inputValue2) || inputValue2 > mainBalance){
-        alert('Invalid input');
+        alert('Invalid Donation Amount');
         return donationBalance2.innerText;     
    }
     const currBalance2 = inputValue2 + donationBalance2;
@@ -52,7 +52,7 @@ const donateButton2 = getAllElementsId('donate-btn2');donateButton2.addEventList
     historyItems.className = "border-2 p-8 rounded-xl"
     historyItems.innerHTML = `
         <h2 class = "text-xl font-bold">${inputValue2} taka is donated for flood at Feni, Bangladesh</h2>
-        <p class = "text-sm text-gray-500">${new Date()}}</p>
+        <p class = "text-sm text-gray-500">${new Date()}</p>
     `
     const historyContainer = getAllElementsId('history-list');
     historyContainer.insertBefore(historyItems, historyContainer.firstChild);
@@ -66,7 +66,7 @@ donateButton3.addEventListener('click', function(){
     const donationBalance3 = getInnerText('donate-amount3');
     const mainBalance = parseFloat(getInnerText('main-balance'));
     if(inputValue3 <= 0  || isNaN(inputValue3) || inputValue3 > mainBalance){
-        alert('Invalid input');
+        alert('Invalid Donation Amount');
         return donationBalance3.innerText;     
    }
     const currBalance3 = inputValue3 + donationBalance3;
@@ -80,7 +80,7 @@ donateButton3.addEventListener('click', function(){
     historyItems.className = "border-2 p-8 rounded-xl"
     historyItems.innerHTML = `
         <h2 class = "text-xl font-bold">${inputValue3} taka is donated for Quota Protest, Bangladesh</h2>
-        <p class = "text-sm text-gray-500">${new Date()}}</p>
+        <p class = "text-sm text-gray-500">${new Date()}</p>
     `
     const historyContainer = getAllElementsId('history-list');
     historyContainer.insertBefore(historyItems, historyContainer.firstChild);
